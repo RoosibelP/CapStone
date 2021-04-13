@@ -1,0 +1,42 @@
+
+<% layout("./layouts/boilerplate") %> 
+
+<!--<div><a href="/gymBootcamps">Go to all gym </a></div>-->
+  
+<h1 class="text-center">Create a new Gym/Bootcamp</h1>
+<div class="col-6 offset-3">
+	<form class="needs-validation" action="/gymBootcamps" method="POST" novalidate>
+	<div class="mb-3">
+		<label class="form-label" for="name">Gym Name</label>
+		<input class="form-control" type="text" id="name" name="gymBootcamps[gymName]">
+	</div>
+
+	<div class="mb-3">
+		<label class="form-label"  for="location">Gym/Bootcamp Location</label>
+		<input class="form-control" type="text" id="location" name="gymBootcamps[location]">
+	</div>
+
+
+	<div class="mb-3">
+		<label class="form-label"  for="description">Description</label>
+		<input class="form-control" type="text" id="description" name="gymBootcamps[description]" required>
+	</div>
+
+	<div class="mb-3">
+		<label class="form-label" for ="image">Choose Image</label>
+		<input class="form-control" type="text" id="image" name="gymBootcamps[image]" required>
+	</div>
+
+	<div class="mb-3">
+		<label class="form-label" for="price"></label>
+		<select class="form-control"  name="gymBootcamps[price]" id="price">
+			<option value="$">$</option>
+			<option value="$">$$</option>
+			<option value="$">$$$</option>
+		</select>
+	</div>
+
+
+	<button>Submit</button>
+</form>
+</div>

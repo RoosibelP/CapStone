@@ -1,0 +1,52 @@
+<% layout("./layouts/boilerplate") %> 
+
+<a href="/gymBootcamps">Go to all gym </a>
+
+<!-- Show Details-->
+
+<img style="width: 600px" src="<%=gymBootcamps.image%>" alt="">
+<h1><%=gymBootcamps.gymName%></h1>
+<p>Submitted By: <%= gymBootcamps.submittedBy.username  %> </p>
+<p><%=gymBootcamps.description%></p>
+<p><%=gymBootcamps.price%></p>
+  <h2><%=gymBootcamps.location%></h2>
+  <% if(user && gymBootcamps.submittedBy.equals(user)) { %> 
+  <div>
+    <a href="/gymBootcamps/<%=gymBootcamps.id%>/edit">Edit <%= gymBootcamps.gymName %> </a>
+  </div>
+  <form action="/gymBootcamps/<%=gymBootcamps.id%>/delete?_method=DELETE" method="POST">
+  <button>Delete GYM</button>
+  </form>
+  <% } %>
+  <!-- Review form-->
+
+  <%  if(user) { %> 
+  <h2>Leave a Review</h2>
+  <form class="needs-validation" action="/gymBootcamps/<%=gymBootcamps.id%>/reviews" method="POST" novalidate>
+      <div>
+          <label class="form-label" for="rating">Rating</label>
+          <input class="form-range" name="review[rating]" type="range" min="0" max="5" step="1" required>
+      </div>
+      <div>
+          <label class="form-label" for="body">Review</label>
+          <textarea class="form-control" name="review[body]" id="body" cols="30" rows="5" required></textarea>
+      </div>
+      <button>Submit</button>
+  </form>
+  <% } %> 
+  <div>
+    <h3>Reviews</h3>
+    <% for (let reviews of gymBootcamps.reviews) {%>
+    <div>
+        <p>Rating: <%=reviews.rating%></p>
+        <p>Author: <%= reviews.author.username %></p>
+        <p>Reviews: <%=reviews.body%></p>
+        <% if(user && reviews.author.equals(user)) { %>
+       
+            <form action="/gymBootcamps/<%=gymBootcamps.id%>/reviews/<%=reviews.id%>?_method=delete" method="POST">
+            <button>Delete</button>
+        </form>
+        <%}%>
+    </div>
+    <%}%>
+</div>

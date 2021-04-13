@@ -1,0 +1,52 @@
+body
+{
+  background-color: rgb(183, 221, 221);
+
+}
+
+ h5
+ {
+   color: rgb(24, 77, 176);
+   font-style: italic;
+   font-weight: bold;
+ }
+
+ .login-form{
+   max-width: 50px;
+   margin: auto;
+ }
+
+ .login-form h1{
+   text-align: center;
+   margin:24px 0;
+   font-size: 48px;
+ }
+
+ .login-form button{
+   display: inline-block;
+   width: 100%;
+   background-color: rgba(188, 241, 134, 0.849);
+   padding: 12px 24px;
+   color: rgb(211, 18, 18);;
+   font-size: 20px;
+   border-radius: 10px;
+   margin-top: 20px;
+ }
+
+ .login-form label {
+   font-size: 20px;
+   color: rgb(87, 218, 60);
+ }
+
+ .delete{
+   border-radius: 30%;
+   padding: 8px;
+   background-color: cornflowerblue;
+ }
+
+ .delete:hover{
+   cursor: pointer;
+   box-shadow: rgb(80, 60, 34);
+ }
+
+ 
