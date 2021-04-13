@@ -118,7 +118,7 @@ app.use((req, res, next) => {
 
 // home route
 app.get('/', (req, res) => {
-  res.render('Home');
+  res.render('home');
 });
 
 
