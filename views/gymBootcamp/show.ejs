@@ -44,7 +44,8 @@
         <% if(user && reviews.author.equals(user)) { %>
        
             <form action="/gymBootcamps/<%=gymBootcamps.id%>/reviews/<%=reviews.id%>?_method=delete" method="POST">
-            <button>Delete</button>
+            
+            <button class="delete">Delete</button>
         </form>
         <%}%>
     </div>

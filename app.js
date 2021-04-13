@@ -34,9 +34,10 @@ const MongoStore = require('connect-mongo');
 
 //'mongodb://localhost:27017/gymBootcampCapstone'
 
+const url = process.env.DB_STRING || 'mongodb://localhost:27017/gymBootcampCapstone';
 //Mongoose Connecting to Mongo   process.env.DB_STRING
 mongoose
-	.connect(process.env.DB_STRING, {
+	.connect(url, {
 		useNewUrlParser: true,
 		useCreateIndex: true,
 		useUnifiedTopology: true,
@@ -64,11 +65,15 @@ app.use(express.urlencoded({extended: true}));
 //Method Override
 app.use(methodOverride('_method'));
 
+
+const secret = process.env.SECRET || 'drake'
+
+
 const store = MongoStore.create({
-	mongoUrl: process.env.DB_STRING,
+	mongoUrl: url,
 	touchAfter: 24 * 60 * 60,
 	crypto: {
-		secret: 'drake',
+		secret,
 	},
 });
 
@@ -81,7 +86,7 @@ store.on('error', (e) => {
 // -----SESSION----
 const sessionConfig = {
 	store,
-	secret: 'drake',
+	secret,
 	resave: false,
 	saveUninitialized: true,
 	cookie: {
