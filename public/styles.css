@@ -1,6 +1,6 @@
 body
 {
-  background-color: rgb(183, 221, 221);
+  
   background-image: url('https://images.unsplash.com/photo-1517707711963-adf9078bdf01?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2100&q=80;');
 
 }
@@ -10,7 +10,7 @@ body
    color: rgb(24, 77, 176);
    font-style: italic;
    font-weight: bold;
-   font-size: 450px;
+   font-size: 30px;
  }
 
  .login-form{
@@ -28,19 +28,29 @@ body
   background-color: rgb(61, 141, 187);
   border-radius: 30%;
   padding: 8px;
+  font-weight: bolder;
 
+ }
+
+ .reg{
+  background-color: rgb(61, 141, 187);
+  border-radius: 20%;
+  padding: 8px;
+  font-weight: bolder;
  }
 
  .delete{
    border-radius: 30%;
    padding: 8px;
    background-color: rgb(100, 198, 237);
+   font-weight: bolder;
  }
 
  .deleteGym{
    background-color: rgb(61, 141, 187);
    border-radius: 30%;
    padding: 8px;
+   font-weight: bolder;
  }
 
  .submit{
@@ -48,6 +58,28 @@ body
    box-shadow: rgb(129, 101, 64);
    border-radius: 30%;
    padding: 8px;
+   font-weight: bolder;
  }
 
+ .sub{
+  background-color: rgb(61, 141, 187);
+  border-radius: 30%;
+  padding: 8px;
+  font-weight: bolder;
+ }
  
+ 
+ .card-header{
+  background-color: rgb(183, 221, 221); 
+  font-weight: bold;
+ }
+
+ .card-text{
+  font-weight: bold;
+
+ }
+ .card-body{
+  background-image: url('https://images.unsplash.com/photo-1517707711963-adf9078bdf01?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2100&q=80;');
+  opacity: 0.7;
+  
+ }
