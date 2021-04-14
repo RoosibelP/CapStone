@@ -70,7 +70,7 @@ asyncCatcher(async (req, res) => {
 		req.flash('error', 'does not exit' );
 		res.redirect('/gymBootcamps');
 	}
-	res.render('gymBootcamps/edit',{ gymBootcamps});
+	res.render('gymBootcamp/edit',{ gymBootcamps});
 		
 })
 );
