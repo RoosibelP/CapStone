@@ -1,6 +1,6 @@
 <% layout("./layouts/boilerplate") %> 
-<h1 class="text-center text-3xl my-833">All Gyms & Bootcamps</h1>
-  <div><a href="/gymBootcamps/new">Create New Gym </a></div>
+<h1 class="text-center text-3xl my-833"> Gyms, Bootcamps & Wellness Tips</h1>
+  <div><a href="/gymBootcamps/new">Create the Wellness Tip of the Day? </a></div>
   <ul>
     <% for (let gymBootcamp of gymBootcamps){%> 
       <li><a href="gymBootcamps/<%=gymBootcamp.id%>"><%=gymBootcamp.gymName%></a></li>

@@ -41,7 +41,7 @@ router.post(
 		failureRedirect: '/login',
 	}),
 	(req, res) => {
-		req.flash('success', 'Welcome back to the LACI Health Hub');
+		req.flash('success', 'Welcome back to the Health Hub');
 		res.redirect('/gymBootcamps');
 	}
 );
