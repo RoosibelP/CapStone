@@ -51,7 +51,7 @@ asyncCatcher(async (req, res) => {
 	gymBootcamp.submittedBy = req.user._id;
 	console.log(req.body)
 	await gymBootcamp.save()
-	req.flash('success', 'New gym or bootcamp was successfully added!');
+	req.flash('success', 'Successfully added!');
 	res.redirect(`/gymBootcamps/${gymBootcamp.id}`)
 }));
 
@@ -109,7 +109,7 @@ router.put(
 	const resultgymBootcamps = await GymBootcamp.findByIdAndUpdate(id,{
 		...req.body.gymBootcamp,
 	});
-	req.flash('success', 'New gym or bootcamp was successfully updated!');
+	req.flash('success', 'Successfully updated!');
 	res.redirect(`/gymBootcamps/${id}`)
 }));
 
@@ -125,7 +125,7 @@ router.delete(
 asyncCatcher(async (req,res) => {
 	const {id} =req.params
 	await GymBootcamp.findByIdAndDelete(id);
-	req.flash('success', 'New gym or bootcamp was successfully deleted!');
+	req.flash('success', ' Successfully deleted!');
 	res.redirect('/gymBootcamps');
 }));
 

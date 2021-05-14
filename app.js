@@ -66,7 +66,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 
 
-const secret = process.env.SECRET || 'drake'
+const secret = process.env.SECRET || 'draake'
 
 
 const store = MongoStore.create({
